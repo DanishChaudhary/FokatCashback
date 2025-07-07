@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: angelone-cashback
+    env: node
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase: MONGODB_URI   # or use `value: your_mongo_uri`
+      - key: REDIRECT_URL
+        value: https://angel-one.onelink.me/Wjgr/fkg1rmt2
